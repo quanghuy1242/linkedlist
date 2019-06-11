@@ -63,6 +63,19 @@ Node* LinkedList::remove(int data) {
 }
 
 Node* LinkedList::find(int data) {
+  if (this->head == NULL) {
+    return NULL;
+  }
+
+  Node* currentNode = this->head;
+
+  while (currentNode) {
+    if (currentNode->data == data) {
+      return currentNode;
+    }
+    currentNode = currentNode->next;
+  }
+
   return NULL;
 }
 
