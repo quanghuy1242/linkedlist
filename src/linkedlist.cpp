@@ -8,7 +8,7 @@ using namespace std;
 
 LinkedList::LinkedList()
 {
-	this->head = this->tail = NULL;
+  this->head = this->tail = NULL;
 };
 
 void LinkedList::prepend(int data) {
@@ -21,14 +21,14 @@ void LinkedList::prepend(int data) {
 }
 
 void LinkedList::append(int data) {
-	Node* newNode = new Node(data, NULL);
-	if (this->head == NULL) {
-		this->head = newNode;
-		this->tail = newNode;
-		return;
-	}
-	this->tail->next = newNode;
-	this->tail = newNode;
+  Node* newNode = new Node(data, NULL);
+  if (this->head == NULL) {
+    this->head = newNode;
+    this->tail = newNode;
+    return;
+  }
+  this->tail->next = newNode;
+  this->tail = newNode;
 }
 
 Node* LinkedList::remove(int data) {
@@ -77,24 +77,24 @@ void LinkedList::fromVector(vector<int>) {
 }
 
 vector<int> LinkedList::toVector() {
-	vector<int> vectorTemp;
-	Node* currentNode = this->head;
+  vector<int> vectorTemp;
+  Node* currentNode = this->head;
 
-	while (currentNode) {
-		vectorTemp.push_back(currentNode->data);
-		currentNode = currentNode->next;
-	}
+  while (currentNode) {
+    vectorTemp.push_back(currentNode->data);
+    currentNode = currentNode->next;
+  }
 
-	return vectorTemp;
+  return vectorTemp;
 };
 
 string LinkedList::toString() {
-	vector<int> v = this->toVector();
-	string rs = "";
-	for (auto i : v) {
-		rs.append(to_string(i) + ' ');
-	}
-	return rs;
+  vector<int> v = this->toVector();
+  string rs = "";
+  for (auto i : v) {
+    rs.append(to_string(i) + ' ');
+  }
+  return rs;
 }
 
 LinkedList* LinkedList::reverse() {

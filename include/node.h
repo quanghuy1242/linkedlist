@@ -3,9 +3,9 @@
 
 class Node {
 public:
-	int data;
-	Node* next;
-	Node(int, Node*);
+  int data;
+  Node* next;
+  Node(int, Node*);
 };
 
 #endif // !NODE_H
