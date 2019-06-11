@@ -1,9 +1,11 @@
 #include <iostream>
+#include <vector>
 #include "linkedlist.h"
 using namespace std;
 
 int main() {
-  LinkedList linkedlist;
+  LinkedList linkedlist, linkedlistfromvector;
+  vector<int> vectorDatas = { 5, 4, 6 };
 
   linkedlist.append(1);
   linkedlist.append(2);
@@ -20,8 +22,13 @@ int main() {
 
   linkedlist.removeHead();
 
+  linkedlistfromvector.fromVector(vectorDatas);
+
   string str = linkedlist.toString();
   cout << str << endl;
+
+  string str2 = linkedlistfromvector.toString();
+  cout << str2 << endl;
   
   cin.get();
   return 0;

@@ -14,7 +14,7 @@ public:
   Node* find(int);
   void removeTail();
   void removeHead();
-  void fromVector(vector<int>);
+  LinkedList* fromVector(vector<int>);
   vector<int> toVector();
   string toString();
   LinkedList* reverse();

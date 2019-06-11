@@ -112,8 +112,11 @@ void LinkedList::removeHead() {
     this->tail = NULL;
   }
 }
-void LinkedList::fromVector(vector<int>) {
-
+LinkedList* LinkedList::fromVector(vector<int> vectorDatas) {
+  for (auto d : vectorDatas) {
+    this->append(d);
+  }
+  return this;
 }
 
 vector<int> LinkedList::toVector() {
