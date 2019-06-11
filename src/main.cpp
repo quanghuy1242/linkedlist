@@ -18,6 +18,8 @@ int main() {
 
   linkedlist.removeTail();
 
+  linkedlist.removeHead();
+
   string str = linkedlist.toString();
   cout << str << endl;
   

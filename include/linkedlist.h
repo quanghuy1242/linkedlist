@@ -13,7 +13,7 @@ public:
   Node* remove(int);
   Node* find(int);
   void removeTail();
-  void removeHead(int);
+  void removeHead();
   void fromVector(vector<int>);
   vector<int> toVector();
   string toString();

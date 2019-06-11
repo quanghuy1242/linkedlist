@@ -98,8 +98,19 @@ void LinkedList::removeTail() {
 
   this->tail = currentNode;
 }
-void LinkedList::removeHead(int) {
+void LinkedList::removeHead() {
+  if (this->head == NULL) {
+    return;
+  }
 
+  Node* deletedHead = this->head;
+
+  if (this->head->next) {
+    this->head = this->head->next;
+  } else {
+    this->head = NULL;
+    this->tail = NULL;
+  }
 }
 void LinkedList::fromVector(vector<int>) {
 
