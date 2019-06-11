@@ -79,8 +79,24 @@ Node* LinkedList::find(int data) {
   return NULL;
 }
 
-void LinkedList::removeTail(int) {
+void LinkedList::removeTail() {
+  Node* deletedTail = this->tail;
 
+  if (this->head == this->tail) {
+    this->head = NULL;
+    this->tail = NULL;
+  }
+
+  Node* currentNode = this->head;
+  while (currentNode->next) {
+    if (currentNode->next->next == NULL) {
+      currentNode->next = NULL;
+    } else {
+      currentNode = currentNode->next;
+    }
+  }
+
+  this->tail = currentNode;
 }
 void LinkedList::removeHead(int) {
 

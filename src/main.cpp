@@ -16,6 +16,8 @@ int main() {
 
   linkedlist.remove(4);
 
+  linkedlist.removeTail();
+
   string str = linkedlist.toString();
   cout << str << endl;
   
